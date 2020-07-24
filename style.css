@@ -6,6 +6,7 @@ body {
   --primary-color: #3b6896;
   --secondary-color: #eef5ff;
   --therty-color: #1815be;
+  --disabled-color: #d4d7da;
 
   font-weight: normal;
 
@@ -32,7 +33,7 @@ p {
   color: lightgray;
 }
 .breadcrumbs__item:last-child {
-  color: var(--therty-color);
+  color: var(--primary-color);
 }
 .breadcrumbs__item i {
   margin: 0 6px;
@@ -70,9 +71,57 @@ p {
 }
 
 .raiting__stars i {
-  color: #d4d7da;
+  color: var(--disabled-color);
 }
 .raiting__stars i:nth-child(-n + 4) {
   margin-right: 2px;
   color: gold;
+}
+
+/* TIMELINE */
+.timeline-container {
+  padding: 30px 0;
+}
+.timeline {
+  --timeline-thickness: 2px;
+  position: relative;
+  border-top: var(--timeline-thickness) solid var(--primary-color);
+  list-style: none;
+  padding-left: 0;
+}
+.event {
+  position: absolute;
+  margin-top: 1em;
+  display: inline-block;
+}
+.event strong {
+  margin-left: -50%;
+  font-weight: 700;
+}
+.event::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1em;
+
+  width: 7px;
+  height: 7px;
+
+  margin-top: calc(var(--timeline-thickness) * -2);
+
+  box-shadow: 0 0 0 var(--timeline-thickness) var(--primary-color);
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+.event[data-active='false']::after {
+  background-color: #fff;
+}
+.event:nth-child(1) {
+  left: 0%;
+}
+.event:nth-child(2) {
+  left: 50%;
+}
+.event:nth-child(3) {
+  left: 100%;
 }
