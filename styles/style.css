@@ -1,0 +1,9 @@
+@import url('base.css');
+/* HEADER */
+@import url('header.css');
+/* BREADCRUMBS */
+@import url('breadcrumbs.css');
+/* TIMELINE */
+@import url('timeline.css');
+/* APARTAMENTS SOLICITATS */
+@import url('offer.css');

@@ -1,0 +1,28 @@
+.header {
+  background-color: var(--secondary-color);
+  padding: 50px 0;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Raiting */
+.raiting {
+  display: flex;
+  align-items: center;
+}
+.raiting__points {
+  color: #fff;
+  background-color: var(--primary-color);
+  margin-right: 0.8em;
+  padding: 8px;
+  border-radius: 5px;
+}
+.raiting__stars i {
+  color: var(--disabled-color);
+}
+.raiting__stars i:nth-child(-n + 4) {
+  margin-right: 2px;
+  color: gold;
+}

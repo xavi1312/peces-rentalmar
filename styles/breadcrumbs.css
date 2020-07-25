@@ -1,0 +1,13 @@
+.breadcrumbs {
+  font-size: 0.7rem;
+  padding: 1em 0;
+}
+.breadcrumbs__item {
+  color: lightgray;
+}
+.breadcrumbs__item:last-child {
+  color: var(--primary-color);
+}
+.breadcrumbs__item i {
+  margin: 0 6px;
+}
