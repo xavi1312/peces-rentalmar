@@ -1,0 +1,62 @@
+.form-data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+}
+
+.form-data label {
+  position: relative;
+}
+
+.form-data input,
+.form-data button {
+  padding: 0.7rem;
+}
+.form-data input {
+  display: block;
+  width: 100%;
+
+  margin-top: 5px;
+
+  outline: none;
+  border-radius: var(--card-br);
+  border: 2px solid var(--disabled-color);
+}
+.form-data .required.invalid input {
+  border-color: red;
+}
+
+.form-data .required::after {
+  position: absolute;
+  top: calc(50% + 7px);
+  right: 0.7rem;
+
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Free';
+}
+.form-data .required.invalid::after {
+  content: '\f00d';
+  color: red;
+}
+.form-data .required.valid::after {
+  content: '\f00c';
+  color: green;
+}
+
+.form-data strong {
+  font-weight: 600;
+}
+.form-data button {
+  margin-top: auto;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.1rem;
+
+  border: none;
+  background-color: var(--therty-color);
+}
+
+.form-data input[type='number'] {
+  -moz-appearance: textfield;
+}
