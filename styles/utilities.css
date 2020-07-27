@@ -1,0 +1,7 @@
+.c-primary-color {
+  color: var(--primary-color);
+}
+
+.text-transform-upc {
+  text-transform: uppercase;
+}

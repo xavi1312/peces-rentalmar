@@ -1,0 +1,44 @@
+.price-overview {
+  margin-top: 40px;
+  margin-left: auto;
+}
+
+.total-price {
+  display: flex;
+}
+.total-price__price {
+  margin-top: auto;
+  margin-left: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.total-price__title {
+  font-size: 1.1rem;
+}
+.total-price__subtitle {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #adaeb2;
+}
+
+.payment-calendar {
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: #f5f5f5;
+}
+.payment-calendar__info {
+  margin-top: 1rem;
+}
+.payment-calendar__info td:nth-child(odd) {
+  font-size: 0.8rem;
+  color: #adaeb2;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.payment-calendar__info td:nth-child(even) {
+  padding-left: 25px;
+  text-align: right;
+  color: var(--primary-color);
+  font-weight: 600;
+}

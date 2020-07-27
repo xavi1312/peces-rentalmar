@@ -1,4 +1,5 @@
 @import url('base.css');
+@import url('utilities.css');
 /* HEADER */
 @import url('header.css');
 /* BREADCRUMBS */
@@ -7,3 +8,4 @@
 @import url('timeline.css');
 /* APARTAMENTS SOLICITATS */
 @import url('offer.css');
+@import url('price-overview.css');
