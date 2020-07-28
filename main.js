@@ -1,37 +1,44 @@
 const form$ = document.getElementById('form-data');
-const FILDS = [
-  'name',
-  'lastname',
-  'email',
-  'phone',
-  'cPostal',
-  'population',
-  'country',
-];
+form$.addEventListener('submit', onSubmiteFrom);
 
-form$.addEventListener('submit', validateForm);
-
-function validateForm(event) {
+function onSubmiteFrom(event) {
   event.preventDefault();
-  let errorsCounter = 0;
-  let data = {};
-  FILDS.forEach(fieldName => {
-    const field = form$[fieldName];
-    data[fieldName] = field.value;
 
-    const parent = field.parentElement;
-    if (isEmty(field.value)) {
-      errorsCounter++;
-      parent.classList.remove('valid');
-      parent.classList.add('invalid');
-    } else {
-      parent.classList.remove('invalid');
-      parent.classList.add('valid');
-    }
-  });
-  if (errorsCounter === 0) {
+  const form = event.target;
+  const inputs = form.getElementsByTagName('input');
+  const [hasError, data] = validateForm(inputs);
+
+  if (!hasError) {
     sendForm(data);
   }
+}
+
+function validateForm(formFiels) {
+  let hasError = false;
+  let data = {};
+
+  for (let i = 0; i < formFiels.length; i++) {
+    const field = formFiels[i];
+    // Set name and value from field to vaiable
+    data[field.name] = field.value;
+
+    hasError = isFieldValid(field);
+
+    //  Manage form classes
+    const parent = field.parentElement;
+    changeClassErrors(hasError, parent);
+  }
+
+  return [hasError, data];
+}
+function isFieldValid(field) {
+  let hasError = false;
+
+  if (isEmty(field.value)) {
+    hasError = true;
+  }
+
+  return hasError;
 }
 
 function isEmty(inputData) {
@@ -39,7 +46,18 @@ function isEmty(inputData) {
 
   return false;
 }
+function changeClassErrors(hasError, element) {
+  if (hasError) {
+    element.classList.remove('valid');
+    element.classList.add('invalid');
+    return;
+  }
 
-async function sendForm(data) {
+  element.classList.remove('invalid');
+  element.classList.add('valid');
+}
+
+function sendForm(data) {
   // Fetching data
+  console.table(data);
 }
