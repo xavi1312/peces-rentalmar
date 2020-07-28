@@ -1,0 +1,31 @@
+.chip {
+  display: inline-block;
+  position: relative;
+
+  padding: 0.2em;
+  margin-bottom: 3px;
+  margin-right: 1em;
+
+  background-color: #fff;
+  z-index: 2;
+}
+.chip::before,
+.chip::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+
+  width: 2em;
+  height: 100%;
+
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: -1;
+}
+.chip::before {
+  left: -1em;
+}
+.chip::after {
+  right: -1em;
+}

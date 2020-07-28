@@ -1,13 +1,13 @@
 @import url('base.css');
 @import url('utilities.css');
-/* HEADER */
-@import url('header.css');
-/* BREADCRUMBS */
-@import url('breadcrumbs.css');
-/* TIMELINE */
-@import url('timeline.css');
-/* APARTAMENTS SOLICITATS */
-@import url('offer.css');
-@import url('price-overview.css');
-/* FORM */
-@import url('form.css');
+/* LAYOUT */
+@import url('./layout/header.css');
+/* COMPONENTS */
+@import url('./components/title-subtitle.css');
+@import url('./components/breadcrumbs.css');
+@import url('./components/timeline.css');
+@import url('./components/card.css');
+@import url('./components/offer.css');
+@import url('./components/chip.css');
+@import url('./components/price-overview.css');
+@import url('./components/form.css');

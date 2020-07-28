@@ -58,5 +58,10 @@
 }
 
 .form-data input[type='number'] {
+  appearance: textfield;
   -moz-appearance: textfield;
+}
+.form-data input::-webkit-outer-spin-button,
+.form-data input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }

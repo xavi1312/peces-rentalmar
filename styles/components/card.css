@@ -1,0 +1,15 @@
+.card {
+  --card-br: 4px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: var(--card-br);
+  box-shadow: 0 0 12px 3px #e1e1e1;
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.card__footer {
+  display: flex;
+}

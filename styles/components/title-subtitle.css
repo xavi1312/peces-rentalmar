@@ -1,0 +1,10 @@
+.title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.title .subtitle {
+  display: block;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--primary-color);
+}
